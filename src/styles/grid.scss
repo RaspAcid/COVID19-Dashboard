@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: black;
+  height: 100vh;
+  display: grid;
+  grid-template-areas: 
+  "header header header"
+  "countryData map chart"
+  "countryData casesData casesData"
+  "footer footer footer";
+  grid-template-rows: 75px 67% 17% 5%;
+  grid-template-columns: 25% 1fr 25%;
+  gap: 10px;
+  padding: 5px;
+
+  @media(max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}
+
+.box {
+  background-color: $box-bg-color;
+  border: 1px $accentColor solid;
+
+  &.chart-box {
+    padding: 10px;
+
+    & h4 {
+      color: $accentColor;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+
+    & canvas {
+      max-width: 100%;
+      max-height: 27%;
+    }
+  }
+
+  &#map {
+    @media(max-width: 1024px) {
+      height: 20rem;
+    }
+  }
+}
+
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+
+  & > h1 {
+    color: $accentColor;
+    padding: 15px;
+  }
+
+  & > h2 {
+    color: $accentColor;
+    padding: 20px;
+  }
+}
+
+.globalCases {
+  grid-area: globalCases;
+}
+
+.map {
+  grid-area: map;
+}
+
+.casesData {
+  grid-area: casesData;
+
+}
+
+.chart-box {
+  grid-area: chart;
+}
+
+.footer {
+  grid-area: footer;
+}

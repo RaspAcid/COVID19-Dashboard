@@ -1,0 +1,79 @@
+.countryData {
+  grid-area: countryData;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    background-color: $box-bg-color-light;
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $box-bg-color;
+  }
+
+  @media(max-width: 1024px) {
+    height: 20rem;
+  }
+}
+
+.countryData_table {
+  width: 100%;
+  text-align: left;
+  color: $accentColor;
+  border-collapse: collapse;
+
+  & .countryData_heading {
+    position: sticky;
+    top: 0;
+    background-color: $box-bg-color;
+    height: 35px;
+    text-align: center;
+
+    & .fas {
+      padding: 10px;
+      position: absolute;
+      top: 0;
+    }
+
+    & .fa-caret-left {
+      left: 0;
+    }
+
+    & .fa-caret-right {
+      right: 0;
+    }
+  }
+}
+
+.countryData_heading_inner {
+  display: inline-block;
+}
+
+.countryData_table_inner {
+  & > tr {
+    height: 35px;
+
+    &:nth-child(odd) {
+      background-color: $box-bg-color-light;
+    }
+  }
+
+  & .confirmedCases {
+    color: $num-color;
+    padding-left: 10px;
+    font-weight: 600;
+
+    & ~ td {
+      padding-left: 10px;
+
+      @media(max-width: 1024px) {
+        text-align: center;
+      }
+    }
+  }
+
+  & img {
+    width: 35px;
+    padding-left: 3px;
+  }
+}

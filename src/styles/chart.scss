@@ -1,0 +1,21 @@
+.chartData_heading {
+  color: $accentColor;
+    position: sticky;
+    top: 0;
+    background-color: $box-bg-color;
+    height: 35px;
+    text-align: center;
+
+    & .fas {
+      position: absolute;
+      top: 0;
+    }
+
+    & .fa-caret-left {
+      left: 0;
+    }
+
+    & .fa-caret-right {
+      right: 0;
+    }
+}

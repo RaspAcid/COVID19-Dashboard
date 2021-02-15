@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/ico"><meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COVID-19 Dashboard</title>
+</head>
+<body>
+
+  <header class="box">
+    <h1>COVID-19 Dashboard</h1>
+    <h2 class="actualDate">Actual Data for: </h2>
+  </header>
+
+  <section class="box countryData">
+
+    <table class="countryData_table">
+      <thead>
+        <tr>
+          <th class="countryData_heading" colspan="3">
+            <i class="fas fa-caret-left data-arrow"></i>
+            <h4 class="countryData_heading_inner"></h4>
+            <i class="fas fa-expand-arrows-alt size"></i>
+            <i class="fas fa-caret-right data-arrow"></i>
+          </th>
+        </tr>
+      </thead>
+      <tbody class="countryData_table_inner"></tbody>
+    </table>
+
+  </section>
+
+  <section class="box" id="map">
+  </section>
+
+  <section class="box casesData">
+    
+    <table class="casesData_table">
+      <thead>
+        <tr>
+          <th class="casesData_heading" colspan="3">
+            <i class="fas fa-caret-left table-arrow"></i>
+            <h4 class="casesData_heading_inner"></h4>
+            <i class="fas fa-expand-arrows-alt size"></i>
+            <i class="fas fa-caret-right table-arrow"></i>
+          </th>
+        </tr>
+      </thead>
+      <tbody class="casesData_table_inner"></tbody>
+    </table>
+  </section>
+
+  <section class="box chart-box">
+    
+    <h4 class="chartData_heading_inner">Total Worldwide<i class="fas fa-expand-arrows-alt size"></i></h4>
+    
+    <h4>Cases</h4>
+    <canvas class="chart"></canvas>
+    <h4>Deaths</h4>
+    <canvas class="chart2"></canvas>
+    <h4>Recovered</h4>
+    <canvas class="chart3"></canvas>
+  </section>
+
+  <footer class="box footer">
+    <div class="footer_container">
+      <p class="info">2020 © RaspAcid</p>
+      <a href="https://github.com/RaspAcid"><i class="fab fa-github-square"></i></a>
+      <a class="rss-icon" href="https://rs.school/js/"><img src="https://rs.school/images/rs_school_js.svg" alt="rss-icon"></a>
+    </div>
+  </footer>
+  
+  <div class="overflow"></div>
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+</body>
+</html>

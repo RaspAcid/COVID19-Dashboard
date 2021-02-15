@@ -1,0 +1,43 @@
+.casesData_table {
+  width: 100%;
+  color: $accentColor;
+
+  & .casesData_heading {
+    position: sticky;
+    top: 0;
+    background-color: $box-bg-color;
+    height: 35px;
+    text-align: center;
+
+    & .fas {
+      padding: 10px;
+      position: absolute;
+      top: 0;
+    }
+
+    & .fa-caret-left {
+      left: 0;
+    }
+
+    & .fa-caret-right {
+      right: 0;
+    }
+  }
+}
+
+.casesData_table_inner {
+  & > tr {
+    height: 35px;
+  }
+
+  & .confirmedCases {
+    color: $num-color;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  & .dataName {
+    color: $accentColor;
+    padding-left: 10px;
+  }
+}
