@@ -1,2 +1,2 @@
-# raspacid-JS2020Q3
-Private repository for @raspacid
+Deployment link:
+https://raspacid.github.io/COVID19-Dashboard/
